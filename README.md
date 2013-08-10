@@ -23,6 +23,8 @@ Create your WPF or WinForms project
      "Your Client Secret"); // get this by signing up at https://auth0.com
   ~~~
 
+> Note: it is recommended to store the secret safely using DPAPI or something similar
+
 3. Trigger login (with Widget) 
 
   ~~~cs
