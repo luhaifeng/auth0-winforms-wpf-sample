@@ -1,12 +1,4 @@
-### Sample of WPF and Winforms using Auth0
-
-Just open the project and run it. There is a WinForms and WPF sample
-
-----
-
-## How it was done?
-
-Create your WPF or WinForms project
+## Usage
 
 1. Install NuGet
 
@@ -18,12 +10,9 @@ Create your WPF or WinForms project
 
   ~~~cs
   var auth0 = new Auth0Client(
-     "youraccount.auth0.com",
-     "Your Client ID",
-     "Your Client Secret"); // get this by signing up at https://auth0.com
+     "{YOUR_AUTH0_DOMAIN}",
+     "{YOUR_CLIENT_ID}");
   ~~~
-
-> Note: it is recommended to store the secret safely using DPAPI or something similar
 
 3. Trigger login (with Widget) 
 
@@ -34,23 +23,23 @@ Create your WPF or WinForms project
     - get user email => t.Result.Profile["email"].ToString()
     - get facebook/google/twitter/etc access token => t.Result.Profile["identities"][0]["access_token"]
     - get Windows Azure AD groups => t.Result.Profile["groups"]
-    - etc.    
+    - etc. */   
   },
   TaskScheduler.FromCurrentSynchronizationContext());
   ~~~
 
   ![](http://puu.sh/3YxF9.png)
 
-Or you can use the connection as a parameter (e.g. here we login with a Windows Azure AD account)
+Or you can use the connection as a parameter (e.g. here we login with a Windows Azure AD account):
 
 ~~~cs
 auth0.LoginAsync(this, "auth0waadtests.onmicrosoft.com").ContinueWith(t => .. );
 ~~~
 
-Or a database
+Or a database connection:
 
 ~~~cs
-auth0.LoginAsync(this, "my-db-connection", "username", "password").ContinueWith(t => .. );
+auth0.LoginAsync("my-db-connection", "username", "password").ContinueWith(t => .. );
 ~~~
 
 ---
