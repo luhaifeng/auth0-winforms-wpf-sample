@@ -1,4 +1,5 @@
 packages
 *.suo
+*.csproj.user
 bin
 obj

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using Auth0.Windows;
+﻿using Auth0.Windows;
+using System;
 using System.Configuration;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WinformsSample
 {
@@ -20,8 +14,7 @@ namespace WinformsSample
         }
 
         private Auth0Client auth0 = new Auth0Client(ConfigurationManager.AppSettings["auth0:Domain"],
-                                                    ConfigurationManager.AppSettings["auth0:ClientId"],
-                                                    ConfigurationManager.AppSettings["auth0:ClientSecret"]);
+                                                    ConfigurationManager.AppSettings["auth0:ClientId"]);
 
         private void LoginWithWidgetButton_Click(object sender, EventArgs e)
         {

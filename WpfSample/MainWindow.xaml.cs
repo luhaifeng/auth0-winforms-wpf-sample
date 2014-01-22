@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Auth0.Windows;
-using System.Windows.Interop;
-using System.Threading.Tasks;
+﻿using Auth0.Windows;
 using System.Configuration;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Interop;
 
 namespace WpfSample
 {
@@ -29,8 +17,7 @@ namespace WpfSample
         }
 
         private Auth0Client auth0 = new Auth0Client(ConfigurationManager.AppSettings["auth0:Domain"], 
-                                                    ConfigurationManager.AppSettings["auth0:ClientId"], 
-                                                    ConfigurationManager.AppSettings["auth0:ClientSecret"]);
+                                                    ConfigurationManager.AppSettings["auth0:ClientId"]);
 
         private void LoginWithWidget_Click(object sender, RoutedEventArgs e)
         {
