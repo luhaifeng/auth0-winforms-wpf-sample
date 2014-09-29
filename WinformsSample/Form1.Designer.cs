@@ -30,6 +30,7 @@
         {
             this.LoginWithWidgetButton = new System.Windows.Forms.Button();
             this.UserProfileTextBox = new System.Windows.Forms.TextBox();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginWithWidgetButton
@@ -50,11 +51,22 @@
             this.UserProfileTextBox.Size = new System.Drawing.Size(524, 318);
             this.UserProfileTextBox.TabIndex = 1;
             // 
+            // logoutButton
+            // 
+            this.logoutButton.Location = new System.Drawing.Point(108, 12);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(75, 23);
+            this.logoutButton.TabIndex = 2;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 382);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.UserProfileTextBox);
             this.Controls.Add(this.LoginWithWidgetButton);
             this.Name = "Form1";
@@ -68,6 +80,7 @@
 
         private System.Windows.Forms.Button LoginWithWidgetButton;
         private System.Windows.Forms.TextBox UserProfileTextBox;
+        private System.Windows.Forms.Button logoutButton;
     }
 }
 

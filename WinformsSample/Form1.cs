@@ -28,5 +28,11 @@ namespace WinformsSample
             },
             TaskScheduler.FromCurrentSynchronizationContext());
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            auth0.Logout();
+            MessageBox.Show("Logout was succesful");
+        }
     }
 }
