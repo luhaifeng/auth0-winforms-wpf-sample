@@ -1,0 +1,11 @@
+{
+  "name": "WinForms and WPF Apps",
+  "type": "sample",
+  "tags": [
+    "dotnet",
+    "desktop",
+    "csharp",
+    "winforms",
+    "wpf"
+  ]
+}
